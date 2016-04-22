@@ -65,6 +65,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('react-container'));
+
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
