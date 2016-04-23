@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import {render} from 'react-dom'
+import TopMenu from './TopMenu'
 
 class App extends Component {
   render(){
-    return <p>This is finally working!</p>
+    return (
+      <div>
+        <TopMenu />
+        <p>This is finally working!</p>
+
+      </div>
+    )
   }
 }
 
