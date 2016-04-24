@@ -4,7 +4,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './client/client.js'
+    './client/routes.js'
   ],
   output: {
     path: require("path").resolve("./dist"),
@@ -26,6 +26,9 @@ module.exports = {
           presets: ['react', 'es2015', 'react-hmre']
         }
       }
-    ]
+    ],
+    resolve: {
+      extensions: ['.js', '.jsx']
+    }
   }
 }
