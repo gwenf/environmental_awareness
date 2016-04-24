@@ -2,6 +2,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import App from './components/App.js'
 import About from './components/About.js'
+import SettingGoals from './components/SettingGoals.js'
+import TakeAction from './components/TakeAction.js'
+import Tutorials from './components/Tutorials.js'
+import WhatDifference from './components/WhatDifference.js'
+
 
 
 import { Router, Route, Link, browserHistory, DefaultRoute } from 'react-router'
@@ -16,10 +21,10 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}/>
     <Route path="about" component={About}/>
-    <Route path="setting-goals" component={About}/>
-    <Route path="tutorials" component={About}/>
-    <Route path="take-action" component={About}/>
-    <Route path="what-difference" component={About}/>
+    <Route path="setting-goals" component={SettingGoals}/>
+    <Route path="tutorials" component={Tutorials}/>
+    <Route path="take-action" component={TakeAction}/>
+    <Route path="what-difference" component={WhatDifference}/>
   </Router>
 ), document.getElementById('react-container'));
 
