@@ -5,6 +5,22 @@ var express = require('express'),
       webpackDevMiddleware = require('webpack-dev-middleware'),
       webpackHotMiddleware = require('webpack-hot-middleware');
 
+//for passport authentication
+var path = require('path'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    expressValidator = require('express-validator'),
+    flash = require('connect-flash'),
+    session = require('express-session'),
+    passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy,
+    mongo = require('mongodb'),
+    mongoose = require('mongoose');
+// bind_ip=127.0.0.1;
+mongoose.connect('mongodb://0.0.0.0:27017/enviro');
+var db = mongoose.connection;
+
+
 var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler,
   {noInfo: true, publicPath: config.output.publicPath}));
@@ -18,20 +34,21 @@ app.get('/', function(req, res){
   res.render('index', { title: 'Home' })
 });
 app.get('/about', function(req,res){
-  res.render('about', { title: 'About' })
+  res.render('index', { title: 'About' })
 });
 app.get('/what-difference', function(req, res){
-  res.render('what-difference', { title: 'What difference can I make?' })
+  res.render('index', { title: 'What difference can I make?' })
 });
 app.get('/tutorials', function(req,res){
-  res.render('tutorials', { title: 'Tutorials' })
+  res.render('index', { title: 'Tutorials' })
 });
 app.get('/setting-goals', function(req, res){
-  res.render('setting-goals', { title: 'Setting Goals' })
+  res.render('index', { title: 'Setting Goals' })
 });
 app.get('/take-action', function(req,res){
-  res.render('take-action', { title: 'Take Action' })
+  res.render('index', { title: 'Take Action' })
 });
+
 
 // var Location = require('react-router').location;
 // var routes = require('./client/routes.js');

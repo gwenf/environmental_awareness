@@ -1,10 +1,9 @@
 {
   "name": "environmental_awareness",
   "version": "1.0.0",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/gwenf/environmental_awareness"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gwenf/environmental_awareness"
   },
   "description": "",
   "main": "app.js",
@@ -17,8 +16,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
+    "express-messages": "^1.0.0",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.3",
+    "mongodb": "^2.1.16",
     "mongoose": "^4.4.12",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.0-alpha6",
     "react": "^15.0.1",
     "react-bootstrap": "^0.29.1",
