@@ -6,11 +6,11 @@ import SettingGoals from './components/SettingGoals.js'
 import TakeAction from './components/TakeAction.js'
 import Tutorials from './components/Tutorials.js'
 import WhatDifference from './components/WhatDifference.js'
-
-
+import Dashboard from './components/Dashboard.js'
+import Login from './components/Login.js'
+import Register from './components/Register.js'
 
 import { Router, Route, Link, browserHistory, DefaultRoute } from 'react-router'
-
 
 // export default (
 //   <Route path='/' handler={App}></Route>
@@ -25,6 +25,8 @@ render((
     <Route path="tutorials" component={Tutorials}/>
     <Route path="take-action" component={TakeAction}/>
     <Route path="what-difference" component={WhatDifference}/>
+    <Route path="login" component={Login}/>
+    <Route path="register" component={Register}/>
   </Router>
 ), document.getElementById('react-container'));
 

@@ -20,6 +20,50 @@ var path = require('path'),
 mongoose.connect('mongodb://0.0.0.0:27017/enviro');
 var db = mongoose.connection;
 
+//bodyParser middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true
+}));
+
+//express validator
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
+//connect flash
+app.use(flash());
+app.use(function (req,res,next){
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
+
+var routes = require('./express/index');
+var users = require('./express/users');
+
+app.use('/',routes);
+app.use('/users',users);
+
 
 var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler,
@@ -30,24 +74,7 @@ app.set('view engine', 'pug');
 // app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/', function(req, res){
-  res.render('index', { title: 'Home' })
-});
-app.get('/about', function(req,res){
-  res.render('index', { title: 'About' })
-});
-app.get('/what-difference', function(req, res){
-  res.render('index', { title: 'What difference can I make?' })
-});
-app.get('/tutorials', function(req,res){
-  res.render('index', { title: 'Tutorials' })
-});
-app.get('/setting-goals', function(req, res){
-  res.render('index', { title: 'Setting Goals' })
-});
-app.get('/take-action', function(req,res){
-  res.render('index', { title: 'Take Action' })
-});
+
 
 
 // var Location = require('react-router').location;

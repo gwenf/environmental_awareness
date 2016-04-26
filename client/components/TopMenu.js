@@ -24,8 +24,8 @@ class TopMenu extends Component {
           </NavDropdown>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">Sign Up</NavItem>
-          <NavItem eventKey={2} href="#">Login</NavItem>
+          <NavItem eventKey={1} href="register">Sign Up</NavItem>
+          <NavItem eventKey={2} href="login">Login</NavItem>
         </Nav>
         </Navbar.Collapse>
       </Navbar>
