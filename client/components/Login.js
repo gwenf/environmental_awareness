@@ -16,7 +16,7 @@ class Login extends Component {
           <h1 style={margStyle}>Login</h1>
         </Col>
         <Col xs={5} xsOffset={1}>
-        <Form horizontal>
+        <Form method='post' action='login' horizontal>
           <FormGroup controlId="formHorizontalEmail">
             <Col componentClass={ControlLabel} sm={2}>
               Email
