@@ -18,7 +18,7 @@ class App extends Component {
             <p>This is a website intended to educate and promote
                 environmental awareness and show that each
                 individual has the power to make a difference.</p>
-            <p><Button bsStyle="primary">Learn more</Button></p>
+              <p><Button href='what-difference' bsStyle="primary">Learn more</Button></p>
             </Col>
             <div style={divStyle}></div>
           </Jumbotron>

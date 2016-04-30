@@ -19,19 +19,22 @@ router.get('/setting-goals', function(req, res){
 router.get('/take-action', function(req,res){
   res.render('index', { title: 'Take Action' })
 });
-router.get('/login', function(req,res){
-  res.render('index', { title: 'Login' })
+router.get('/dashboard', function(req,res){
+  res.render('dashboard', { title: 'User Dashboard' })
 });
-router.get('/register', function(req,res){
-  res.render('index', { title: 'Sign Up' })
-});
+// router.get('/login', function(req,res){
+//   res.render('index', { title: 'Login' })
+// });
+// router.get('/register', function(req,res){
+//   res.render('index', { title: 'Sign Up' })
+// });
 
 function ensureAuthenticated(req, res, next){
 	if(req.isAuthenticated()){
 		return next();
 	} else {
 		//req.flash('error_msg','You are not logged in');
-		res.redirect('/users/login');
+		res.redirect('/login');
 	}
 }
 

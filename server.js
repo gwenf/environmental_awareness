@@ -13,12 +13,13 @@ var path = require('path'),
     flash = require('connect-flash'),
     session = require('express-session'),
     passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy,
+    LocalStrategy = require('passport-local').Strategy;
     mongo = require('mongodb'),
     mongoose = require('mongoose');
 // bind_ip=127.0.0.1;
-mongoose.connect('mongodb://0.0.0.0:27017/enviro');
-var db = mongoose.connection;
+// mongoose.connect('mongodb://0.0.0.0:27017/enviro');
+// var db = mongoose.connection;
+require('./models/database.js');
 
 //bodyParser middleware
 app.use(bodyParser.json());
@@ -62,7 +63,7 @@ var routes = require('./express/index');
 var users = require('./express/users');
 
 app.use('/',routes);
-app.use('/users',users);
+app.use('/',users);
 
 
 var compiler = webpack(config);
