@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TopMenu from './TopMenu'
+import TopMenu from './Navigation/TopMenu'
 import { Jumbotron, Button, Col } from 'react-bootstrap'
 
 var divStyle = {

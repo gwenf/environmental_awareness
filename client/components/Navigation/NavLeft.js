@@ -1,18 +1,11 @@
 import React, { Component } from 'react'
 import { MenuItem, Navbar, NavItem, Nav, NavDropdown } from 'react-bootstrap'
 
-class TopMenu extends Component {
+class NavLeft extends Component {
   render(){
     return (
       <div>
-      <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">Enviro1</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
+
         <Nav>
           <NavItem eventKey={1} href="about">About</NavItem>
           <NavDropdown eventKey={3} title="Learn" id="basic-nav-dropdown">
@@ -23,15 +16,9 @@ class TopMenu extends Component {
             <MenuItem eventKey={3.3} href="take-action">Take Action</MenuItem>
           </NavDropdown>
         </Nav>
-        <Nav pullRight>
-          <NavItem eventKey={1} href="register">Sign Up</NavItem>
-          <NavItem eventKey={2} href="login">Login</NavItem>
-        </Nav>
-        </Navbar.Collapse>
-      </Navbar>
       </div>
     )
   }
 }
 
-export default TopMenu
+export default NavLeft

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import TopMenu from './TopMenu'
+import TopMenuLoggedIn from './Navigation/TopMenuLoggedIn'
 import { Jumbotron, Button } from 'react-bootstrap'
 
 class Dashboard extends Component {
   render(){
     return (
       <div>
-        <TopMenu />
+        <TopMenuLoggedIn />
         <h1>User Dashboard</h1>
       </div>
     )
