@@ -32,6 +32,10 @@ app.use(session({
   resave: true
 }));
 
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 //express validator
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -59,11 +63,6 @@ app.use(function (req,res,next){
   next();
 });
 
-var routes = require('./express/index');
-var users = require('./express/users');
-
-app.use('/',routes);
-app.use('/',users);
 
 
 var compiler = webpack(config);
@@ -75,7 +74,11 @@ app.set('view engine', 'pug');
 // app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/dist'));
 
+var routes = require('./express/index');
+var users = require('./express/users');
 
+app.use('/',routes);
+app.use('/',users);
 
 
 // var Location = require('react-router').location;

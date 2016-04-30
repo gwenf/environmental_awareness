@@ -4,5 +4,7 @@ html
     title= title
     link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css")
   body
+    if errors
+      p.alert.alert-danger= errors
     #react-container
     script(src='bundle.js')

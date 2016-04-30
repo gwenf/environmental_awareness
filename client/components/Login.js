@@ -19,10 +19,10 @@ class Login extends Component {
         <Form method='post' action='login' horizontal>
           <FormGroup controlId="formHorizontalEmail">
             <Col componentClass={ControlLabel} sm={2}>
-              Email
+              Username
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl name="username" type="text" placeholder="Username" />
             </Col>
           </FormGroup>
 
@@ -31,7 +31,7 @@ class Login extends Component {
               Password
             </Col>
             <Col sm={10}>
-              <FormControl type="password" placeholder="Password" />
+              <FormControl name="password" type="password" placeholder="Password" />
             </Col>
           </FormGroup>
 
