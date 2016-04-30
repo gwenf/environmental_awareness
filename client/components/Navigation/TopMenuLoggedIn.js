@@ -10,10 +10,10 @@ class TopMenu extends Component {
       <div>
       <Navbar>
         <NavHeader />
-          <Navbar.Collapse>
-            <NavLeft />
-            <NavRightLoggedIn />
-          </Navbar.Collapse>
+        <Navbar.Collapse>
+          <NavLeft />
+          <NavRightLoggedIn />
+        </Navbar.Collapse>
       </Navbar>
       </div>
     )

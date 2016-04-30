@@ -5,11 +5,9 @@ class NavRightLoggedIn extends Component {
   render(){
     return (
       <div>
-
         <Nav pullRight>
           <NavItem eventKey={1} href="logout">Logout</NavItem>
         </Nav>
-
       </div>
     )
   }

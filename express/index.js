@@ -19,7 +19,7 @@ router.get('/setting-goals', function(req, res){
 router.get('/take-action', function(req,res){
   res.render('index', { title: 'Take Action' })
 });
-router.get('/dashboard', function(req,res){
+router.get('/dashboard', ensureAuthenticated, function(req,res){
   res.render('dashboard', { title: 'User Dashboard' })
 });
 // router.get('/login', function(req,res){
