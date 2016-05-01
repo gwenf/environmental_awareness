@@ -8,4 +8,6 @@ mongoose.connect('mongodb://localhost/enviro',function(err){
     console.log('Mongoose successfully connected.')
   }
 });
+
+mongoose.set('debug', true);
 // var db = mongoose.connection;

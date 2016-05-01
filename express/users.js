@@ -15,6 +15,9 @@ router.get('/register', function(req,res){
   res.render('index', { title: 'Sign Up' })
 });
 
+//testing user db info
+
+
 // Register User
 router.post('/register', function(req, res){
 	var name = req.body.name;
