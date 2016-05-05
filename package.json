@@ -24,6 +24,7 @@
     "express-messages": "^1.0.0",
     "express-session": "^1.13.0",
     "express-validator": "^2.20.3",
+    "jquery": "^2.2.3",
     "mongodb": "^2.1.16",
     "mongoose": "^4.4.12",
     "passport": "^0.3.2",
