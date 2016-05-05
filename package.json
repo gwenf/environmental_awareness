@@ -1,5 +1,6 @@
 {
   "name": "environmental_awareness",
+  "description": "gwen's awesome green app",
   "version": "1.0.0",
   "repository": {
     "type": "git",
