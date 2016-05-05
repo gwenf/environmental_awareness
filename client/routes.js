@@ -1,14 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/App.js'
-import About from './components/About.js'
-import SettingGoals from './components/SettingGoals.js'
-import TakeAction from './components/TakeAction.js'
-import Tutorials from './components/Tutorials.js'
-import WhatDifference from './components/WhatDifference.js'
-import Dashboard from './components/Dashboard.js'
-import Login from './components/Login.js'
-import Register from './components/Register.js'
+
+import { App, About SettingGoals, TakeAction, Tutorials, WhatDifference, Dashboard, Login, Register } from './components'
 
 import { Router, Route, Link, browserHistory, DefaultRoute } from 'react-router'
 
